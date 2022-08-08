@@ -1,0 +1,92 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex
+{
+    display: flex;
+}
+header
+{
+    color:#0139a6;
+    border-top:3px solid #0139a6;
+}
+header div.left
+{
+    flex:1;
+}
+header div.right
+{
+    flex:5;
+    padding-left: 3rem;
+}
+header img
+{
+    width: 100%;
+}
+
+/* headerAfer */
+
+ul.headerAfter
+{
+    list-style: none;
+    padding: 0;
+    font-size: 10px;
+    margin:0  auto;
+    justify-content: flex-end;
+}
+ul.headerAfter img
+{
+    width: auto;
+    height: 12px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+ul.headerAfter input
+{
+    width: 6rem;
+    font-size: 10px;
+    margin-top:1px;
+    border-color: #214ea9;
+    border-radius: 0.4rem;
+}
+
+ul.headerAfter li a
+{
+    display: block;
+    padding: 4px;
+    border-right: 0.04rem solid #0139a6;
+    text-decoration: none;
+    color: #0139a6;
+
+}
+ul.headerAfter li:nth-child(4) a, ul.headerAfter li:last-child a
+{
+    border-right: none;
+}
+/* nav */
+
+ul.navi
+{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    background-color: #0139a6;
+    justify-content: space-around;
+}
+ul.navi li a
+{
+    display: block;
+    text-decoration: none;
+    padding:0.4rem;
+    color:white;
+    
+}
+.sticky
+{
+    position: sticky;
+    top:0;
+    left: 0;
+    
+}
