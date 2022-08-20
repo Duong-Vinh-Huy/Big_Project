@@ -340,6 +340,7 @@ div iframe
     width: 32%;
     position: relative;
     padding: 0.3rem;
+    z-index: -1;
 
 }
 .wrapper .one-item img
