@@ -9,6 +9,21 @@ function init()
             $('nav.menu-nav').removeClass('sticky');
         })
 
+        $('#goTop').hide();
+        $(window).scroll(function()
+        {
+            if($(this).scrollTop() >= 200)
+            $('#goTop').show("slow");
+            else
+            $('#goTop').hide("slow");
+        })
+
+        $("#goTop").click(function(){
+            $("html, body").animate({
+                scrollTop: 0,}
+            ,1000)
+        });
+
         // CLick nút xem tất cả và rút gọn
         $(".view-all").click(function()
         {
@@ -36,14 +51,16 @@ function init()
             
         })
 
+        
 
-        // di chuột vào bản tin
-        // $("div.picture").click(function()
-        // {
-        //     $(".full-info").css({
-        //         "display":"block",
-        //     })
-        // })
 
+        var colors=["blue", "darkblue", "green", "gold", "red", "idianred", "purple",
+                    "goldenrod", "gray", "greenyellow"];
+        let sj = document.querySelectorAll(".month");
+        for(let i of sj)
+        {
+            let idx= parseInt(Math.random() * colors.length);
+            i.style.backgroundColor = colors[idx];
+        }
     }
 
