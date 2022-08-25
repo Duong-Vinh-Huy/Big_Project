@@ -1,0 +1,633 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    color: #0139a6;
+    border-top: 3px solid #0139a6;
+}
+
+header div.left {
+    flex: 1;
+}
+
+header div.right {
+    flex: 5;
+    padding-left: 3rem;
+}
+
+header div.right h1,
+header div.right h2 {
+    margin: 1rem 0;
+}
+
+header img {
+    width: 100%;
+}
+
+/* headerAfer */
+
+ul.headerAfter {
+    list-style: none;
+    padding: 0;
+    font-size: 10px;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+
+ul.headerAfter img {
+    width: auto;
+    height: 12px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+ul.headerAfter input {
+    width: 6rem;
+    font-size: 10px;
+    margin-top: 1px;
+    border-color: #214ea9;
+    border-radius: 0.4rem;
+}
+
+ul.headerAfter li a {
+    display: block;
+    padding: 4px;
+    border-right: 0.04rem solid #0139a6;
+    text-decoration: none;
+    color: #0139a6;
+}
+
+ul.headerAfter li:nth-child(4) a,
+ul.headerAfter li:last-child a {
+    border-right: none;
+}
+
+/* nav */
+
+ul.navi {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #0139a6;
+    justify-content: space-around;
+}
+
+ul.navi li a:hover {
+    background-color: #032d83;
+}
+
+ul.navi li a {
+    display: block;
+    padding: 0.4rem;
+    color: white;
+    z-index: 99;
+
+}
+
+ul.navi li:hover ul.introduce {
+    display: block;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+ul.introduce {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    position: absolute;
+    background-color: #0139a6;
+    display: none;
+}
+
+ul.introduce li {
+    border-top: 0.02rem solid white;
+}
+
+ul.introduce li a {
+    padding: 0.3rem 0.5rem;
+    font-size: smaller;
+}
+
+/* header cho điện thoại */
+@media all and (max-width:400px) {
+    ul.flex {
+        flex-direction: column;
+    }
+
+    header div.right {
+        display: none;
+    }
+
+    ul.headerAfter {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hiddens {
+        display: none;
+        width: 100%;
+        height: 8vw;
+        position: inherit;
+    }
+
+    ul.introduce {
+        width: 100%;
+    }
+
+    .navi:hover li.hiddens {
+        display: block;
+    }
+    /* phần thân cho điện thoại */
+    .majors{
+        display: block;
+    }
+    .majors .major, .majors .students
+    {
+        width: 100%;
+    }
+
+    section.container-info
+    {
+        display: block;
+    }
+    section.problems div:nth-child(2)
+    {
+        width: 100%;
+        margin:10px;
+    }
+    section.problems div:nth-child(3)
+    {
+        width: 40%;
+        margin:10px;
+    }
+    section.problems div.comments
+    {
+        width: 100%;
+        margin: 10px;
+    }
+    section.problems div.comments div.comment
+    {
+            width: 90%;
+            margin: 10px;
+    }
+    #addBtn
+    {
+        font-size: 10px;
+    }
+
+
+    a#goTop {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 1.35rem;
+        font-size: 1rem;
+    }
+}
+
+
+h3 {
+    margin: 2rem 10px 1rem 10px;
+    padding: 0 10px;
+    font-size: large;
+    border-left: 0.5rem solid #0139a6;
+    width: 100%;
+}
+/* majors */
+
+
+.flex
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.majors
+{
+    background:linear-gradient(white , #f8faff);
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+}
+.major, .students{
+    width: 49%;
+}
+.students img
+{
+    width: 100%;
+}
+.students-comment
+{
+    text-align: center;
+    margin: 1rem 0;
+}
+div.major-item
+{
+    margin:0.5rem;
+    border-bottom: 0.04rem dashed black;
+}
+div.major-item >div, div.major-item>a
+{
+    display: block;
+    margin:0.5rem;
+}
+
+/* slider */
+
+div.carousel
+{
+    margin-top:1rem;
+    width: 100%;
+    
+}
+.slider-main
+{
+    width: 70%;
+    margin: 0 auto;
+    
+}
+.img-feature
+{
+    position: relative;
+}
+.slider-main img
+{
+    width: 100%;
+    z-index: -1;
+}
+.control
+{
+    position: absolute;
+    top:50%;
+    padding: 0.5rem;
+    background-color: rgb(129, 119, 119);
+    transform: translateY(-50%);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.control:hover
+{
+    background-color: rgb(54, 52, 52);
+    color:white;
+}
+.prev
+{
+    left:5px;
+}
+.next
+{
+    right: 5px;
+}
+
+div.dot
+{
+    justify-content: center;
+}
+div.dot div
+{
+    margin:0.4rem;
+    cursor: pointer;
+}
+div.dot div:hover
+{
+    color:rgb(130, 123, 123);
+}
+.checked /* đang được chọn trong slide*/
+{
+    color: rgb(130, 123, 123);
+}
+@keyframes slideShow {
+    0%{
+        opacity: 0;
+    }
+    20% {
+    opacity: 0.2;
+    }
+    40% {
+    opacity: 0.4;
+    }
+    60% {
+    opacity: 0.6;
+    }
+    80% {
+    opacity: 0.8;
+        }
+    100%
+    {
+    opacity: 1;
+    }
+}
+/* thông tin tuyển sinh */
+.container-info
+{
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    justify-content: space-between;
+}
+.left-info, .right-info
+{
+    padding: 10px;
+}
+.info-item
+{
+    border-bottom: 1px solid gray;
+    font-size: small;
+    height: 4rem;
+    position: relative;
+}
+@keyframes new {
+    from{color:white} to{color: gold;}
+}
+.info-item span
+{
+    background-color: red;
+    animation:new 1s infinite;
+    margin-left:0.5rem;
+    border-radius: 4px 0;
+    font-size: 0.7rem;
+}
+.info-item i
+{
+    color:red;
+}
+.info-item a
+{
+    display: block;
+    color: #0139a6;
+}
+.info-item a:hover
+{
+    color: rgb(193, 55, 55);
+}
+.info-item div:last-child
+{
+    font-size: smaller;
+    color: gray;
+    vertical-align: bottom;
+    margin:auto 0 0 0;
+    text-align:end;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+}
+/* phần các khối icons */
+section.icons
+{
+    display: flex;
+    width: 80%;
+    margin: 2rem auto 0 auto;
+    justify-content: space-between;
+    color:white;
+    
+}
+section.icons div
+{
+    width: 24%;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: smaller;
+    padding: 1rem;
+}
+section.icons div img
+{
+    display: block;
+    margin:0 auto;
+    transition: transform 1s;
+}
+section.icons div img:hover
+{
+    transform:rotate(20deg);
+}
+
+/* phần comment */
+
+.problems div
+{
+    margin-top:0.5rem;
+}
+.problems>div:first-child
+{
+    font-size: larger;
+    margin:1rem 10px;
+    border-bottom:0.3rem solid #0139a6;
+}
+.problems>div:first-child div
+{
+    background-color: #0139a6;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 1rem 1rem 0 0;
+    color: white;
+}
+.problems>div:nth-child(2)
+{
+    margin: 0 4rem;
+}
+.problems input[type=text]
+{
+    height: 1.5rem;
+    width: 80%;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+}
+.problems input[type=button]
+{
+    height: 1.5rem;
+    width: 5%;
+    vertical-align: bottom;
+    background-color: #0139a6;
+    color:white;
+    border: 1px solid #012d84;
+    border-radius: 5px;
+}
+
+.problems>div:nth-child(3)
+{
+    margin: 1rem 4rem;
+    width: 20%;
+    background-color: #144ec2;
+    border-radius: 0 0.5rem 0 0.5rem;
+    padding: 5px;
+    color: white;
+}
+
+div.comments
+{
+    margin: 1rem 5rem;
+}
+div.comment>div:last-child
+{
+    margin-bottom:2rem;
+}
+
+/* footer */
+footer {
+    color: white;
+}
+
+
+.flexs {
+    margin: 0;
+    padding: 10px;
+    background-color: #0139a6;
+    display: flex;
+    justify-content: center;
+}
+
+.flexx {
+    width: 25%;
+    margin: 30px;
+}
+
+.flexx>a {
+    text-decoration: none;
+    font-size: 15px;
+    width: 25%;
+}
+
+.element>p {
+    padding: 10px;
+}
+
+div.element>p>a {
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+.address>p {
+    font-size: 1vw;
+}
+
+.logo {
+    flex-direction: row;
+}
+
+.logo>img {
+    width: 250px;
+}
+
+.icon {
+    display: flex;
+}
+
+.icon>p>a>img {
+    width: 60px;
+    padding: 10px;
+}
+
+.support a {
+    color: white;
+}
+
+a#goTop {
+    opacity: 0.8;
+    background-color: rgb(207 94 94);
+    padding: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 1rem;
+    z-index: 99;
+}
+@media all and (max-width:728px) {
+    .icon>p>a>img {
+        width: 65px;
+    }
+
+    .logo {
+        position: relative;
+        left: 25%;
+    }
+
+    .element {
+        list-style: none;
+    }
+
+    .element>p {
+        font-size: 3vw;
+        width: 80vw;
+    }
+
+    div.element>p>a {
+        font-size: 8vw;
+
+    }
+
+    .flexs {
+        flex-direction: column;
+    }
+
+    .flexx {
+        padding: 0;
+        margin: 0;
+    }
+
+    .flexx>h2 {
+        width: 90vw;
+    }
+}
+
+/* footer cho điện thoại */
+@media all and (max-width:400px) {
+    .icon>p>a>img {
+        width: 65px;
+    }
+
+    .logo {
+        position: relative;
+        left: 5%;
+
+    }
+
+    .element {
+        list-style: none;
+    }
+
+    .element>p {
+        font-size: 3vw;
+        width: 80vw;
+    }
+
+    div.element>p>a {
+        font-size: 8vw;
+
+    }
+
+    .flexs {
+        flex-direction: column;
+    }
+
+    .flexx {
+        padding: 0;
+        margin: 0;
+    }
+
+    .flexx>h2 {
+        width: 90vw;
+    }
+}

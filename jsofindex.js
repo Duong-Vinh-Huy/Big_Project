@@ -4,7 +4,12 @@ function init()
         $(window).scroll(function()
         {
             if($(this).scroll)
-            $('nav.menu-nav').addClass('sticky');
+            {
+                $('nav.menu-nav').addClass('sticky');
+                $('nav.menu-nav').css({
+                    "z-index":"9999",
+                })
+            }
             else
             $('nav.menu-nav').removeClass('sticky');
         })

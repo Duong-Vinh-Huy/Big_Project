@@ -1,0 +1,433 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+header {
+    color: #0139a6;
+    border-top: 3px solid #0139a6;
+}
+header div.left {
+    flex: 1;
+}
+header div.right {
+    flex: 5;
+    padding-left: 3rem;
+}
+header div.right h1,
+header div.right h2 {
+    margin: 1rem 0;
+}
+header img {
+    width: 100%;
+}
+
+/* headerAfer */
+ul.headerAfter {
+    list-style: none;
+    padding: 0;
+    font-size: 10px;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+ul.headerAfter img {
+    width: auto;
+    height: 12px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+ul.headerAfter input {
+    width: 6rem;
+    font-size: 10px;
+    margin-top: 1px;
+    border-color: #214ea9;
+    border-radius: 0.4rem;
+}
+ul.headerAfter li a {
+    display: block;
+    padding: 4px;
+    border-right: 0.04rem solid #0139a6;
+    text-decoration: none;
+    color: #0139a6;
+}
+ul.headerAfter li:nth-child(4) a,
+ul.headerAfter li:last-child a {
+    border-right: none;
+}
+/* nav */
+
+ul.navi {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #0139a6;
+    justify-content: space-around;
+}
+ul.navi li a:hover {
+    background-color: #032d83;
+}
+ul.navi li a {
+    display: block;
+    padding: 0.4rem;
+    color: white;
+    z-index: 99;
+}
+ul.navi li:hover ul.introduce {
+    display: block;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+ul.introduce {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    position: absolute;
+    background-color: #0139a6;
+    display: none;
+}
+
+ul.introduce li {
+    border-top: 0.02rem solid white;
+}
+ul.introduce li a {
+    padding: 0.3rem 0.5rem;
+    font-size: smaller;
+}
+a#goTop {
+    opacity: 0.8;
+    background-color: rgb(207 94 94);
+    padding: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 1rem;
+    z-index: 99;
+}
+/* điện thoại */
+@media all and (max-width:400px) {
+    ul.flex {
+        flex-direction: column;
+    }
+
+    header div.right {
+        display: none;
+    }
+
+    ul.headerAfter {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hiddens {
+        display: none;
+        width: 100%;
+        height: 8vw;
+        position: inherit;
+    }
+
+    ul.introduce {
+        width: 100%;
+    }
+
+    .navi:hover li.hiddens {
+        display: block;
+    }
+    /* phần thân điện thoại */
+    section.inc
+    {
+        display: block;
+    }
+    section.left-2
+    {
+        width: 100%;
+    }
+    section.left-2 .rows
+    {
+        display: block;
+    }
+    section.left-2 .rows div.row
+    {
+        width: 80%;
+        margin:1rem auto;
+    }
+    section.right
+    {
+        width: 80%;
+        margin:0 auto;
+    }
+    section.right .list-one ul
+    {
+        margin-left: 40px;
+    }
+}
+
+
+/* nội dung */
+section.left
+{
+    flex:3;
+}
+section.right{
+    flex :1;
+}
+div.head
+{
+    justify-content: space-between;
+}
+div.head h3
+{
+    margin: 1rem 10px;
+    padding: 0 10px;
+    font-size: large;
+    border-left: 0.5rem solid #0139a6;
+}
+div.head .btn
+{
+    margin: 1rem 5px 1rem 0;
+    font-size: large;
+}
+div.head .btn i
+{
+    padding:0.2rem;
+    background-color: #4a7de4;
+    border-radius: 5px;
+}
+div.head .btn i:hover
+{
+    background-color: #0139a6;
+    color:white;
+}
+div.row
+{
+    margin:1rem 10px 1rem 10px;
+    border-bottom: 1px solid rgb(71, 70, 70);
+}
+div.row a
+{
+    display: block;
+    flex:1;
+}
+div.row a img
+{
+    width: 100%;
+}
+div.row .infor
+{
+    flex:3;
+    margin-left: 0.7rem;
+    font-size: small;
+}
+div.row .infor div
+{
+    margin-bottom:0.3rem;
+}
+div.row .infor div:nth-child(2), div.row .infor div:nth-child(3)
+{
+    font-size: smaller;
+}
+div.row .infor div:nth-child(3) a
+{
+    color:#0139a6;
+}
+
+section.right .list-one
+{
+    background-color: rgb(195, 193, 193);
+    padding: 10px;
+    margin: 10px;
+    font-size: smaller;
+    margin-bottom: 1rem;
+}
+section.right .list-one div
+{
+    text-align: center;
+    color: red;
+    font-size: larger;
+    border-bottom: 1px solid black;
+}
+section.right .list-one ul
+{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+section.right .list-one ul li
+{
+    padding-top: 1rem;
+}
+section.right .list-one ul li:last-child
+{
+    padding-bottom: 1rem;
+}
+section.right .list-one ul a:hover
+{
+    color: rgb(202, 52, 52);
+}
+/* dạng mảng cho phần thông báo */
+section.left-2
+{
+    flex:3;
+    display: none;
+}
+section.left-2 .rows
+{
+    margin: 0 auto;
+}
+section.left-2 .rows .row
+{
+    position: relative;
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+section.left-2 .rows .row img
+{
+    border-radius: 5px 5px  0 0;
+}
+
+/* footer */
+footer {
+    color: white;
+}
+.flexs {
+    margin: 0;
+    padding: 10px;
+    background-color: #0139a6;
+    display: flex;
+    justify-content: center;
+}
+.flexx {
+    width: 25%;
+    margin: 30px;
+}
+.flexx>a {
+    text-decoration: none;
+    font-size: 15px;
+    width: 25%;
+}
+.element>p {
+    padding: 10px;
+}
+div.element>p>a {
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+.address>p {
+    font-size: 1vw;
+}
+
+.logo {
+    flex-direction: row;
+}
+
+.logo>img {
+    width: 250px;
+}
+
+.icon {
+    display: flex;
+}
+
+.icon>p>a>img {
+    width: 60px;
+    padding: 10px;
+}
+
+.support a {
+    color: white;
+}
+@media all and (max-width:728px) {
+    .icon>p>a>img {
+        width: 65px;
+    }
+
+    .logo {
+        position: relative;
+        left: 25%;
+    }
+
+    .element {
+        list-style: none;
+    }
+
+    .element>p {
+        font-size: 3vw;
+        width: 80vw;
+    }
+
+    div.element>p>a {
+        font-size: 8vw;
+
+    }
+
+    .flexs {
+        flex-direction: column;
+    }
+
+    .flexx {
+        padding: 0;
+        margin: 0;
+    }
+
+    .flexx>h2 {
+        width: 90vw;
+    }
+}
+
+/* footer cho điện thoại */
+@media all and (max-width:400px) {
+    .icon>p>a>img {
+        width: 65px;
+    }
+
+    .logo {
+        position: relative;
+        left: 5%;
+
+    }
+
+    .element {
+        list-style: none;
+    }
+
+    .element>p {
+        font-size: 3vw;
+        width: 80vw;
+    }
+
+    div.element>p>a {
+        font-size: 8vw;
+
+    }
+
+    .flexs {
+        flex-direction: column;
+    }
+
+    .flexx {
+        padding: 0;
+        margin: 0;
+    }
+
+    .flexx>h2 {
+        width: 90vw;
+    }
+
+}

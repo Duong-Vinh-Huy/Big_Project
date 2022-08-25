@@ -340,7 +340,7 @@ div iframe
     width: 32%;
     position: relative;
     padding: 0.3rem;
-    z-index: -1;
+    z-index: 10;
 
 }
 .wrapper .one-item img
@@ -352,7 +352,6 @@ div iframe
 .wrapper .one-item .ima
 {
     position: relative;
-
 }
 
 .wrapper .one-item .month
@@ -460,6 +459,7 @@ a#goTop
     right:5px;
     bottom: 5px;
     border-radius: 1rem;
+    z-index: 99;
 }
 /* header điện thoại */
 @media all and (max-width:400px)
@@ -468,9 +468,14 @@ a#goTop
     {
         flex-direction: column;
     }
-    header div.right, ul.headerAfter
+    header div.right
     {
         display: none;
+    }
+    ul.headerAfter
+    {
+        display: flex;
+        flex-direction: row;
     }
 
     .hiddens
@@ -488,6 +493,7 @@ a#goTop
     {
         display: block;
     }
+    /* repon cho phần thân khi ở điện thoại */
 
     div.new,  .new-hidden
     {
@@ -610,9 +616,4 @@ a#goTop
         width: 90vw;
     }
 
-    /* .support a
-    {
-        font-size: smaller;
-    } */
-    /* đổi flex thành flexx vì trùng */
 }
