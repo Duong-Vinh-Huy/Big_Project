@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2000">
+    <link rel="stylesheet" href="/css/room.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+   <link href="/images/favicon.jpg" alt="favicon" rel="shortcut icon" />
+    <script src="/js/room.js"></script>
+    <title>Phòng-Ban</title>
+   
+</head>
+<body onload="init()">
+    <header class="flex">
+        <div class="left">
+          <img src="/images/LOGO.png" alt="logo" />
+        </div>
+        <div class="right">
+          <h2>ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH</h2>
+          <h1>TRƯỜNG ĐẠI HỌC XÃ HỘI</h1>
+        </div>
+      </header>
+  
+      <ul class="flex headerAfter">
+        <li><a href="#">Giảng viên</a></li>
+        <li><a href="#">Người học</a></li>
+        <li><a href="#">Cựu sinh viên</a></li>
+        <li>
+          <a href="#"><img src="/images/flag.webp" alt="flag" /></a>
+        </li>
+        <li><input type="text" placeholder="TÌM KIẾM" /></li>
+        <li><a href="#">ĐĂNG NHẬP</a></li>
+      </ul>
+  
+      <nav class="menu-nav">
+        <ul class="flex navi">
+          <li class="home">
+            <a href="/html/index.html"><i class="fa-solid fa-house-chimney"></i></a>
+          </li>
+          <li class="hiddens">
+            <a href="#">Giới thiệu</a>
+            <ul class="introduce">
+              <li><a href="javascript:;">Tổng quan</a></li>
+              <li><a href="javascript:;">Giá trị cốt lõi</a></li>
+              <li><a href="javascript:;">Triết lí giáo dục</a></li>
+              <li><a href="javascript:;">Tầm nhìn - sứ mạng</a></li>
+              <li><a href="javascript:;">Ban giám hiệu</a></li>
+              <li><a href="javascript:;">Mục tiêu chiến lược</a></li>
+              <li><a href="javascript:;">Kiểm định chất lượng</a></li>
+            </ul>
+          </li class="hiddens">
+          <li class="hiddens"><a href="/html/room.html">Phòng - Ban</a>
+              <ul class="introduce">
+              <li><a href="javascript:;">Phòng quản lí & đào tạo</a></li>
+              <li><a href="javascript:;">Phòng công tác sinh viên</a></li>
+              <li><a href="javascript:;">Ban nội vụ</a></li>
+              <li><a href="javascript:;">Ban y tế học đường</a></li>
+              </ul>
+          </li>
+          <li class="hiddens"><a href="/html/Subject.html">Khoa - Bộ môn</a>
+            <ul class="introduce">
+              <li><a href="javascript:;">Khoa CNTT</a></li>
+              <li><a href="javascript:;">Khoa ngoại ngữ</a></li>
+              <li><a href="javascript:;">Khoa xã hội học</a></li>
+              <li><a href="javascript:;">Khoa kinh tế</a></li>
+              <li><a href="javascript:;">Khoa CNSH</a></li>
+              <li><a href="javascript:;">Khoa xây dựng</a></li>
+              </ul>
+          </li>
+          <li class="hiddens"><a href="/html/admissions.html">Tuyển sinh</a>
+            <ul class="introduce">
+              <li><a href="javascript:;">Hệ chính quy</a></li>
+              <li><a href="javascript:;">Hệ đào tạo từ xa</a></li>
+              <li><a href="javascript:;">Hệ đào tạo đặc biệt</a></li>
+            </ul>
+          </li>
+          <li class="hiddens"><a href="/html/scholarship.html">Học bổng</a>
+            <ul class="introduce">
+              <li><a href="javascript:;">Khuyến khích học tập</a></li>
+              <li><a href="javascript:;">Học sinh nghèo vượt khó</a></li>
+              <li><a href="javascript:;">Sinh viên 5 tốt</a></li>
+            </ul>
+          </li>
+          <li class="hiddens"><a href="/html/DoiTac.html">Đối tác</a>
+            <ul class="introduce">
+              <li><a href="javascript:;">Trong nước</a></li>
+              <li><a href="javascript:;">Ngoài nước</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="animate__animated animate__fadeIn">
+        <div class="Banner">
+          <div class="container">
+            <img src="/images/banner_0.jpg" id="slideShow" alt="black_1">
+          </div>
+          <div class="list"> 
+            <button onclick="imgFirst()">1</button>
+            <button onclick="imgPrev()">2</button>
+            <button onclick="imgNext()">3</button>
+            <button onclick="imgLast()">4</button>
+          </div> 
+        </div>
+      </section>
+
+
+      <section >
+        <div class="place">
+          <div class="titles">
+              <div class="Menu">
+                  <h1 >Cơ sở
+                  </h1>
+              </div>
+              <div class="title">
+                 <h3><a href="#"> 
+                    <i class="fa-solid fa-map-location-dot" ></i>&ensp;
+                    Cơ sở Quận 1</a>
+                  </h3>
+              </div>
+              <div class="title">
+                  <h3><a href="#">
+                    <i class="fa-solid fa-map-location-dot" ></i>&ensp;
+                    Cơ sở Gò Vấp</a>  
+                  </h3>
+              </div>
+              <div class="title">
+                  <h3><a href="#">
+                    <i class="fa-solid fa-map-location-dot" ></i>&ensp;
+                    Cơ sở Bình Thạnh</a>
+                  </h3>
+              </div>
+          </div>
+        </div>
+  
+        <div class="place">
+          <div class="titles">
+              <div class="Menu">
+                  <h1>Phòng Đào Tạo</h1>
+              </div>
+              <div class="title">
+                 <h3><a href="#"> 
+                  <i class="fa-solid fa-chalkboard-user"></i>&ensp;
+                  Đào Tạo</a>
+                </h3>
+              </div>
+              <div class="title">
+                  <h3> <a href="#">
+                    <i class="fa-solid fa-user-graduate"></i>&ensp;
+                    Sau Đại Học</a>  
+                  </h3>
+              </div>
+              <div class="title">
+                  <h3><a href="#">
+                    <i class="fa-solid fa-handshake"></i>&ensp;
+                    Công Tác</a>
+                  </h3>
+              </div>
+          </div>
+        </div>
+
+        <div class="place last" >
+          <div class="titles">
+              <div class="Menu">
+                  <h1>Phòng Quản Lí</h1>
+              </div>
+              <div class="title">
+                 <h3><a href="#">
+                  <i class="fa-solid fa-bars-progress"></i>&ensp;
+                  Đối Ngoại Quản Lí</a>
+                </h3>
+              </div>
+              <div class="title">
+                  <h3> <a href="#">
+                    <i class="fa-solid fa-people-group"></i>&ensp;
+                    Tổ Chức Cán Bộ</a>
+                  </h3>
+              </div>
+              <div class="title">
+                  <h3><a href="#">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>&ensp;
+                    Quản Trị Thiết Bị</a>
+                  </h3>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      
+    
+
+      <footer class="flexs">
+        <div class="logo flexx  icons">
+            <img src="/images/US again.png" alt="US">
+            <div class="icon">
+                <p><a href="#"><img src="/images/face.png" alt="face" ></a></p>
+                <p><a href="#"><img src="/images/insta.png" alt="insta"></a></p>
+                <p><a href="#"><img src="/images/telephone.png" alt="tele"></a></p>
+                <p><a href="#"><img src="/images/ytb.png" alt="ytb"></a></p>
+            </div>
+        </div>
+
+
+        <div class=" flexx ">
+            <h2>
+                Đia chỉ
+                <hr style="width:30%;" color="#0093dd" align="left"/>
+            </h2>
+            <div class="element address">
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Cơ sở 1: 45 Nguyễn Khắc Nhu, P. Cô Giang, Q.1, TP. HCM
+                </p>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Cơ sở 2: 233A Phan Văn Trị, P.11, Q. Bình Thạnh, TP. HCM
+                </p>  
+                <p> 
+                    <i class="fa-solid fa-location-dot"></i>
+                    Cơ sở 3: 69/68 Đặng Thùy Trâm, P. 13, Q. Bình Thạnh, TP. HCM
+                </p>  
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Cơ sở 4:160/63A-B Phan Huy Ích, P. 12, Q. Gò Vấp, TP. HCM
+                </p>   
+            </div>
+        </div>
+
+        <div class="flexx ">
+            <h2>
+                Hỗ Trợ
+                <hr style="width:30%;" color="#0093dd" align="left"/>
+            </h2>
+            <div class="element support ">
+                <p><i class="fa-solid fa-check"></i><a href="#">Đào Tạo</a></p>
+                <p><i class="fa-solid fa-check"></i><a href="#">Thông Tin</a></p>
+                <p><i class="fa-solid fa-check"></i><a href="#">Sinh Viên</a></p>
+                <p><i class="fa-solid fa-check"></i><a href="#">Các Hệ Đào Tạo</a></p>
+            </div>
+        </div>
+    </footer>
+    <a id="goTop" href="javascript:;"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+
+</body>
+</html>

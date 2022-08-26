@@ -64,7 +64,7 @@ function init()
             listDot[i].classList.remove("checked");
         }
         currentIdx = idx;
-        imgFeature.src = `images/tsinh${idx+1}.jpeg`;
+        imgFeature.src = `/images/tsinh${idx+1}.jpeg`;
         listDot[idx].classList.add("checked");
     }
 

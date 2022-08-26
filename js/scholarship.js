@@ -9,7 +9,6 @@ function init()
                     "z-index":"9999",
                 })
             }
-            
             else
             $('nav.menu-nav').removeClass('sticky');
         })
